@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ElectroGaming | Videojuegos y tecnología</title>
+<meta name="description" content="ElectroGaming: videojuegos, móviles y tecnología. Descubre nuestras ofertas y novedades.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#101827">
+<style>
+:root{--bg:#0b1020;--panel:#131d31;--text:#f7f8fc;--muted:#aab6cc;--green:#45e08a;--line:#29364e}
+*{box-sizing:border-box}body{margin:0;background:#f3f5f9;color:#172033;font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial}
+header{background:#0b1020;color:white;padding:16px max(20px,calc((100% - 1180px)/2));display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.logo{font-size:1.35rem;font-weight:900;letter-spacing:.04em}.logo span{color:var(--green)}
+nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:#d9e1f0;text-decoration:none;font-size:.94rem}
+.hero{background:radial-gradient(circle at 80% 15%,#273d65,#101827 55%,#090e1b);color:white;padding:54px 20px}
+.hero-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
+.kicker{color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem}
+h1{font-size:clamp(2.5rem,6vw,5rem);line-height:.98;margin:12px 0 16px;letter-spacing:-.045em}
+.hero p{color:#c5d0e2;max-width:580px}
+.price{font-size:clamp(3rem,7vw,5rem);font-weight:950;color:var(--green);line-height:1;margin:18px 0}
+.note{font-size:.8rem;color:#aab6cc}
+.hero-art{min-height:280px;border:1px solid #40506d;border-radius:24px;background:linear-gradient(145deg,#263c61,#101827 65%);display:grid;place-items:center;text-align:center;padding:25px;box-shadow:0 20px 60px #0005}
+.hero-art .big{font-size:5rem}.hero-art strong{display:block;font-size:1.5rem}
+.btn{display:inline-block;background:var(--green);color:#062013;text-decoration:none;font-weight:900;padding:14px 22px;border-radius:12px;margin-top:10px}
+main{max-width:1180px;margin:38px auto;padding:0 20px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;flex-wrap:wrap}
+h2{font-size:1.8rem;margin:0 0 6px}.sub{color:#657189;margin:0 0 20px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+input,select{padding:12px 14px;border:1px solid #d6dce7;border-radius:10px;background:white;font:inherit}
+input{flex:1;min-width:200px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:white;border:1px solid #e1e6ef;border-radius:17px;overflow:hidden;box-shadow:0 5px 18px #1720330a}
+.photo{height:155px;background:linear-gradient(145deg,#e5eaf2,#f8f9fc);display:grid;place-items:center;font-size:4rem}
+.card-body{padding:15px}.tag{font-size:.72rem;color:#16804a;font-weight:800;text-transform:uppercase}
+.card h3{margin:5px 0;font-size:1.02rem}.card p{margin:0;color:#657189;font-size:.88rem;min-height:40px}
+.card-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:14px}
+.card-price{font-weight:900;font-size:1.15rem}.add{border:0;background:#101827;color:white;padding:9px 12px;border-radius:9px;font-weight:800;cursor:pointer}
+.info{background:#e8f8ef;border:1px solid #c4eed5;border-radius:14px;padding:16px;margin:28px 0;color:#174d30}
+footer{background:#0b1020;color:#c3ccdc;padding:30px 20px;margin-top:50px}footer .inner{max-width:1180px;margin:auto}
+@media(max-width:850px){.hero-inner{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.grid{grid-template-columns:1fr 1fr;gap:10px}.photo{height:115px;font-size:3rem}.card-body{padding:11px}.card p{font-size:.8rem}}
+</style>
+</head>
+<body>
+<header><div class="logo">ELECTRO<span>GAMING</span></div><nav><a href="#oferta">Oferta GTA 6</a><a href="#catalogo">Catálogo</a><a href="#contacto">Contacto</a><a href="#carrito">Carrito (<b id="cart">0</b>)</a></nav></header>
+<section class="hero" id="oferta"><div class="hero-inner"><div><div class="kicker">Promoción para nuevos clientes</div><h1>GTA 6<br>protagonista.</h1><p>La gran novedad de videojuegos llega a ElectroGaming. Consulta disponibilidad y condiciones de la oferta especial para nuevos clientes.</p><div class="price">65 €</div><a class="btn" href="#catalogo" onclick="document.getElementById('search').value='GTA 6';filterProducts()">VER OFERTA GTA 6</a><p class="note">Precio promocional sujeto a disponibilidad, plataforma, edición y condiciones de compra. No se confirma stock hasta validar el pedido.</p></div><div class="hero-art"><div><div class="big">🎮</div><strong>VIDEOJUEGOS · MÓVILES · TECNOLOGÍA</strong><span style="color:#b9c7dc">Tu próxima compra empieza aquí</span></div></div></div></section>
+<main id="catalogo"><div class="section-head"><div><h2>Explora la tienda</h2><p class="sub">Catálogo inicial de ejemplo. Los productos y precios deben confirmarse antes de vender.</p></div></div>
+<div class="tools"><input id="search" placeholder="Buscar iPhone, Samsung, GTA 6..." oninput="filterProducts()"><select id="currency" onchange="renderProducts()"><option value="EUR">Euros (€)</option><option value="USD">Dólares ($)</option></select><select id="category" onchange="filterProducts()"><option value="all">Todas las categorías</option><option value="gaming">Videojuegos</option><option value="phones">Móviles</option><option value="tech">Tecnología</option></select></div>
+<div class="grid" id="products"></div>
+<div class="info"><b>Importante:</b> esta versión es una demostración visual. El carrito no cobra ni envía pedidos todavía. Antes de activar ventas hay que cargar el inventario real, verificar precios, configurar una pasarela de pago y definir envíos, devoluciones y datos legales del vendedor.</div>
+</main>
+<footer id="contacto"><div class="inner"><div class="logo">ELECTRO<span>GAMING</span></div><p>Videojuegos y tecnología.</p><p>Contacto: añade aquí tu correo y teléfono comercial antes de publicar.</p><small>© 2026 ElectroGaming. Precios, disponibilidad y condiciones pendientes de validación.</small></div></footer>
+<script>
+const products=[
+{name:'GTA 6 · Oferta nuevos clientes',cat:'gaming',price:65,icon:'🎮',desc:'Oferta promocional. Confirma plataforma y disponibilidad.'},
+{name:'PlayStation 5',cat:'gaming',price:499,icon:'🕹️',desc:'Consola de videojuegos · precio orientativo.'},
+{name:'Mando inalámbrico',cat:'gaming',price:69,icon:'🎮',desc:'Accesorio gaming · precio orientativo.'},
+{name:'iPhone',cat:'phones',price:899,icon:'📱',desc:'Gama Apple · selecciona modelo y capacidad.'},
+{name:'Samsung Galaxy',cat:'phones',price:749,icon:'📲',desc:'Gama Samsung · selecciona modelo y capacidad.'},
+{name:'Auriculares inalámbricos',cat:'tech',price:129,icon:'🎧',desc:'Audio y accesorios · precio orientativo.'},
+{name:'Ordenador gaming',cat:'tech',price:1299,icon:'💻',desc:'PC gaming · configuración por confirmar.'},
+{name:'Smartwatch',cat:'tech',price:199,icon:'⌚',desc:'Relojes inteligentes · precio orientativo.'}
+];
+let cart=0;
+function money(n){let c=document.getElementById('currency').value;return new Intl.NumberFormat(c==='EUR'?'es-ES':'en-US',{style:'currency',currency:c,maximumFractionDigits:0}).format(c==='USD'?n*1.08:n)}
+function renderProducts(list=products){document.getElementById('products').innerHTML=list.map((p)=>`<article class="card"><div class="photo" role="img" aria-label="${p.name}">${p.icon}</div><div class="card-body"><div class="tag">${p.cat==='gaming'?'Videojuegos':p.cat==='phones'?'Móviles':'Tecnología'}</div><h3>${p.name}</h3><p>${p.desc}</p><div class="card-bottom"><span class="card-price">${money(p.price)}</span><button class="add" onclick="addToCart()">Añadir</button></div></div></article>`).join('')}
+function filterProducts(){let q=document.getElementById('search').value.toLowerCase(),c=document.getElementById('category').value;renderProducts(products.filter(p=>(c==='all'||p.cat===c)&&p.name.toLowerCase().includes(q)))}
+function addToCart(){cart++;document.getElementById('cart').textContent=cart;alert('Producto añadido a la cesta de demostración. Aún no se pueden realizar pagos.')}
+renderProducts();
+</script>
+</body>
+</html>
